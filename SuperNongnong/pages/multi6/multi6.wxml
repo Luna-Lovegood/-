@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="page-section">
+    <view class="text-box" scroll-y="true">      
+      <text style="max-width:200px;overflow-y:auto;height:220px;" selectable="true">{{outputTxt}}</text>
+    </view>
+  </view>
+
+  <view class="page-section page-gap page-center">
+    <text selectable="true" class="text-description little-gap-top">支持手动输入、向下拉</text>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+        <input class="weui-input" placeholder-style="color:#000000"  maxlength="50" 
+          placeholder="3的平方加8再乘以6再除以2等于几" value="{{inputTxt}}" confirm-type ="send" bindconfirm="bindConfirmControl" bindfocus="bindFocusClear"/>
+    </view>
+  </view>
+
+  <view class="button-selection page-gap">
+    <view class="{{isDbg?'button-show':'common-disappear'}}">
+      <button type="default" size="mini" bindtap="bindTest">调试</button>
+    </view> 
+
+    <view class="button-selection2">
+      <button type="default" class="little-gap-left little-gap-top" size="mini" data-cp="3的平方加8再乘以6再除以2等于几|5的平方根|6的七次方|99的三倍|19的三分之一是多少|77的一半加13等于多少|67个9加起来是多少|5个15乘在一起等于几|4乘以6加5乘以8加12乘以7|四分之三|7的9倍|三的一半|17个9|12的对数|23的自然对数|5加六加七再乘10|三只苹果加五只苹果等于几只苹果|19加7" bindtap="bindCorpusGenerator">随机计算</button>
+    </view>
+  </view>
+</view>

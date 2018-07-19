@@ -1,0 +1,158 @@
+page { 
+  display: flex;
+  flex-direction: column;
+  overflow:hidden; 
+  position:fixed;   
+  margin: 0px; 
+  background-size: 100% 100%; 
+  background-image: url(https://summitgao.github.io/weather_backgroud.jpg);
+} 
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.citylist{
+  font-family: "黑体";
+  font-size: 20px;
+  opacity: 0.5;
+  color: white;
+  font-weight: bold;
+}
+.city{
+  font-family: "黑体";
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.time{
+  font-family: "黑体";
+  font-size: 20px;
+  margin-right: 14px;
+  color: white;
+}
+.temperature{
+  text-align: right;
+  font-size: 72px;
+  margin-right: 10px;
+  color: white;
+}
+.detail{
+  text-align: right;
+  font-size: 25px;
+  margin-right: 10px;
+  color: white;
+}
+.future{
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     color: white;
+     background:rgba(255, 255, 255, 0.3);
+     margin-right: 10px;
+     margin-left: 10px;
+     border-radius: 7%;
+}
+.title{
+  font-family: "黑体";
+  font-size: 20px;
+  margin-left: 22px;
+}
+.tomorrow{
+  font-family: "幼圆";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.tomorrow1{
+  font-family: "幼圆";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.tomorrow2{
+  font-family: "幼圆";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+.space{
+  height: 10px;
+}
+.air_condition{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    background:rgba(255, 255, 255, 0.3);
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 7%;
+}
+.air_condition_title{
+  margin-left: 22px;
+  font-family: "黑体";
+  font-size: 20px;
+  color:white;
+}
+.quality{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 50px;
+}
+.quality_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 14px;
+}
+.advice{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  background:rgba(255, 255, 255, 0.3);
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 7%;
+}
+.advice_title{
+  margin-left: 22px;
+  font-family: "黑体";
+  font-size: 20px;
+}
+.advice_detail{
+  margin-left: 20px;
+  font-family: "幼圆";
+  font-size: 15px;
+}
+.wind{
+  color: white;
+  margin-right: 10px;
+  text-align: right;
+}
+.uv{
+  margin-left: 20px;
+  font-family: "幼圆";
+  font-size: 15px;
+}
+.dress_index{
+  margin-left: 20px;
+  font-family: "幼圆";
+  font-size: 15px;
+}
+.wash_index{
+  margin-left: 20px;
+  font-family: "幼圆";
+  font-size: 15px;
+}

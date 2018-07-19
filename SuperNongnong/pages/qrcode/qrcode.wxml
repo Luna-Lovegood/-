@@ -1,0 +1,9 @@
+<view class="container" style="padding:30rpx;background-image:url(http://ww1.sinaimg.cn/large/6deb72a3ly1frtqalsnz7j20ia0mvq4z.jpg);">
+  <view>
+    <view style="text-align:center; margin-top:80rpx; font-size:40rpx; padding:30rpx;color:#ffffff;">
+      Welcome to use SuperNN!
+    </view>
+    <view style="padding:30rpx;color:#ffffff;"> 终于等到你~ 感谢你在众多小程序中pick了我。这是一款基于欧拉蜜、聚合数据、快递100等API接口的人工智能交互小程序，它可以与你进行聊天互动，也可以来查询天气、快递，查看日历、节目预告等等，功能丰富，更多精彩，等你挖掘！
+    </view>
+  </view>
+</view>

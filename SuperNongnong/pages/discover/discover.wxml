@@ -1,0 +1,40 @@
+<view class="section" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+  <view>
+    <navigator url="../multi/multi">
+      <image src="{{img1.src}}" class="discover-image" style="width:{{systemInfo.windowWidth-20}}px;height: {{(systemInfo.windowWidth-20)/2.742}}px;">
+      </image>
+    </navigator>
+  </view>
+  <view>
+    <navigator url="../multi1/multi1">
+      <image src="{{img2.src}}" class="discover-image" style="width:{{systemInfo.windowWidth-20}}px;height: {{(systemInfo.windowWidth-20)/2.742}}px;">
+      </image>
+    </navigator>
+  </view>
+  <view>
+    <navigator url="../multi2/multi2">
+      <image src="{{img3.src}}" class="discover-image" style="width:{{systemInfo.windowWidth-20}}px;height: {{(systemInfo.windowWidth-20)/2.742}}px;">
+      </image>
+    </navigator>
+  </view>
+  <view class="discover-image-two" style="width:{{systemInfo.windowWidth-20}}px;">
+    <navigator url="../multi3/multi3">
+      <image src="{{img4.src}}" class="discover-image" style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+      </image>
+    </navigator>
+    <navigator url="../multi4/multi4">
+      <image src="{{img5.src}}" class="discover-image" style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+      </image>
+    </navigator>
+  </view>
+  <view class="discover-image-two" style="width:{{systemInfo.windowWidth-20}}px;">
+    <navigator url="../multi5/multi5">
+      <image src="{{img6.src}}" class="discover-image" style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+      </image>
+    </navigator>
+    <navigator url="../multi6/multi6">
+      <image src="{{img7.src}}" class="discover-image" style="width:{{(systemInfo.windowWidth-30)/2}}px;height: {{(systemInfo.windowWidth-30)/2*187/344}}px;">
+      </image>
+    </navigator>
+  </view>
+</view>

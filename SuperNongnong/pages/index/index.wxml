@@ -1,0 +1,151 @@
+<view class="navbar">
+  <view class="navbar-item" wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="swichNav">
+    <text class="navbar-text {{currentNavbar==idx ? 'active' : ''}}">{{item}}</text>
+  </view>
+</view>
+<view bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+  <!-- 天气 -->
+  <view class="hot-item-container {{currentNavbar==0 ? '' : 'hidden'}}" style="height: {{systemInfo.windowHeight}}px;" bindscrolltolower="pullUpLoad">
+
+
+    <scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" class="page1">
+      <view class="content">
+        <picker class="citylist" mode="region" bindchange="bindRegionChange">选择城市</picker>
+        <view class="city">{{city}}</view>
+        <view class="time">{{time}}</view>
+      </view>
+      <view></view>
+      <view></view>
+
+      <view class="temperature">{{temperature}}℃</view>
+      <view class="wind">{{wind}}</view>
+
+      <view class="detail">{{detail}}</view>
+
+
+      <view class="space"></view>
+
+      <view class="future">
+        <view class="space"></view>
+        <view class="yubao_title">三天预报</view>
+        <view class="tomorrow">
+          <view class="tomorrow_date">{{tomorrow_date}}</view>
+          <view class="tomorrow_detail">{{tomorrow_detail}}</view>
+          <view class="tomorrow_temp">{{tomorrow_temp}}</view>
+
+        </view>
+        <view class="tomorrow">
+          <view class="tomorrow_date1">{{tomorrow_date1}}</view>
+          <view class="tomorrow_detail1">{{tomorrow_detail1}}</view>
+          <view class="tomorrow_temp1">{{tomorrow_temp1}}</view>
+
+        </view>
+        <view class="tomorrow">
+          <view class="tomorrow_date2">{{tomorrow_date2}}</view>
+          <view class="tomorrow_detail2">{{tomorrow_detail2}}</view>
+          <view class="tomorrow_temp2">{{tomorrow_temp2}}</view>
+        </view>
+        <view class="space"></view>
+      </view>
+      <view class="space"></view>
+      <view class="space"></view>
+
+      <view class="air_condition">
+        <view class="space"></view>
+        <view class="air_condition_title">空气质量</view>
+        <view class="quality">
+          <view class="PM2.5">{{PM}}</view>
+          <view class="AQI">{{AQI}}</view>
+        </view>
+        <view class="quality_name">
+          <view class="PM2.5_name">空气质量</view>
+          <view class="AQI_name">AQI指数</view>
+        </view>
+        <view class="space"></view>
+      </view>
+      <view class="space"></view>
+      <view class="advice">
+        <view class="advice_title">生活建议</view>
+        <view class="dress_index">穿衣指数：{{dressindex}}</view>
+        <view class="advice_detail">穿衣：{{advicedetail}}</view>
+        <view class="uv">紫外线强度：{{uv}}</view>
+        <view class="wash_index">洗车指数：{{washindex}}</view>
+      </view>
+    </scroll-view>
+
+  </view>
+
+
+
+  <!--聊天-->
+  <view class="container {{currentNavbar==1 ? '' : 'hidden'}}">
+    <view class="page-section">
+      <view class="text-box" scroll-y="true">
+        <text style="max-width:200px;overflow-y:auto;height:200px;" selectable="true">{{outputTxt}}</text>
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="doommview">
+        <block wx:for="{{doommData}}" wx:key="id">
+          <text wx:if="{{item.display}}" class="aon" style="animation: first {{item.time}}s linear infinite;top:{{item.top}}%;color:{{item.color}};">
+                {{item.text}}
+            </text>
+        </block>
+      </view>
+    </view>
+
+    <view wx:if="{{isSpeaking}}" class="speak-style">
+      <image class="sound-style" src="../../pics/voice_icon_speech_sound_1.png"></image>
+      <image wx:if="{{j==2}}" class="sound-style" src="../../pics/voice_icon_speech_sound_2.png"></image>
+      <image wx:if="{{j==3}}" class="sound-style" src="../../pics/voice_icon_speech_sound_3.png"></image>
+      <image wx:if="{{j==4}}" class="sound-style" src="../../pics/voice_icon_speech_sound_4.png"></image>
+      <image wx:if="{{j==5}}" class="sound-style" src="../../pics/voice_icon_speech_sound_5.png"></image>
+    </view>
+
+
+      <button type="default" style="background-color:#ffffff;margin-top:10rpx;" class="btn-style" bindtouchstart="touchdown"           bindtouchend="touchup">按下录音，松开结束</button>
+
+
+  </view>
+
+  <!--快递-->
+  <view class="latest-item-container {{currentNavbar==2 ? '' : 'hidden'}}" style="padding-top: 10px;background-image: url(http://ww1.sinaimg.cn/large/6deb72a3ly1frtqbasyxqj23t72md7wq.jpg);background-size:cover;"  bindscrolltolower="pullUpLoadLatest">
+    <view class="company">
+      <view class="title">请选择快递公司：</view>
+      <!-- <picker bindchange="bindPickerChange" value="{{array[index]['id']}}" range="{{array}}" range-key="name"> -->
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+        <view class="picker" style="line-height: 50px;height: 50px;background: #fff;padding-left: 20px;font-size:18px;opacity:0.50;">
+          当前选择：{{array[index]['name']}}
+        </view>
+      </picker>
+    </view>
+    <view class="caseid">
+      <view class="title">快递单号：</view>
+      <input type="number" placeholder="请输入快递单号" bindinput="bindKeyInput" style="line-height: 50px;height: 50px;background: #fff;padding-left: 20px;font-size:18px;opacity:0.50;" />
+    </view>
+    <button type="default" size="{{primarySize}}" bindtap="bindquery" style="margin-top:140rpx;background: #fff;margin:50rpx;opacity:0.7;"> 查询 </button>
+    <template name="items">
+      <view class="row">
+        <view class="express_time">
+          {{time}}
+        </view>
+        <view class="icon"></view>
+        <view class="express_infos">
+          {{context}}
+        </view>
+      </view>
+    </template>
+    <!--快递信息模板 end-->
+    <scroll-view scroll-y="true" wx:if="{{haslist}}" style="height:500rpx;background-color: rgba(0,0,0,0.2);">
+      <!--循环输出列表 begin-->
+      <view wx:for="{{list}}" wx:key="*this" >
+          <template is="items" data="{{...item}}" />
+        <!--循环输出列表 end-->
+      </view>
+    </scroll-view>
+    <scroll-view wx:else scroll-y="true" style="height:500rpx;background-color: rgba(0,0,0,0.2);">
+      <view style="color:#ffffff;padding:20rpx;">{{errmsg}}</view>
+    </scroll-view>
+  </view>
+</view>

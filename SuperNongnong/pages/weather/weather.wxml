@@ -1,0 +1,65 @@
+<!--pages/weather/weather.wxml-->
+
+<scroll-view scroll-y="true" style="height: {{scrollHeight}}px;" >
+<view class = "content">  
+  <picker class = "citylist" mode="region" bindchange="bindRegionChange">选择城市</picker>  
+  <view class = "city">{{city}}</view>
+  <view class = "time">{{time}}</view>
+</view>
+<view></view><view></view>
+
+<view class = "temperature">{{temperature}}℃</view>
+<view class = "wind">{{wind}}</view>
+
+<view class = "detail">{{detail}}</view>
+
+
+<view class = "space"></view>
+
+<view class = "future">
+  <view class = "space"></view>
+  <view class = "title">三天预报</view>
+  <view class = "tomorrow">
+    <view class = "tomorrow_date">{{tomorrow_date}}</view>
+    <view class = "tomorrow_detail">{{tomorrow_detail}}</view>
+    <view class = "tomorrow_temp">{{tomorrow_temp}}</view>
+   
+  </view>
+  <view class = "tomorrow1">
+    <view class = "tomorrow_date1">{{tomorrow_date1}}</view>
+    <view class = "tomorrow_detail1">{{tomorrow_detail1}}</view>
+    <view class = "tomorrow_temp1">{{tomorrow_temp1}}</view>
+    
+  </view>
+  <view class = "tomorrow2">
+    <view class = "tomorrow_date2">{{tomorrow_date2}}</view>
+    <view class = "tomorrow_detail2">{{tomorrow_detail2}}</view>
+    <view class = "tomorrow_temp2">{{tomorrow_temp2}}</view>
+  </view>
+  <view class = "space"></view>
+</view>
+<view class = "space"></view>
+<view class = "space"></view>
+
+<view class = "air_condition">
+  <view class = "space"></view>
+  <view class = "air_condition_title">空气质量</view>
+  <view class = "quality">
+    <view class = "PM2.5">{{PM}}28</view>
+    <view class = "AQI">{{AQI}}56</view>
+  </view>
+  <view class = "quality_name">
+    <view class = "PM2.5_name">PM2.5指数</view>
+    <view class = "AQI_name">AQI指数</view>  
+  </view>
+  <view class = "space"></view>
+</view>
+<view class = "space"></view>
+<view class = "advice">
+  <view class = "advice_title">生活建议</view>
+  <view class = "dress_index">穿衣指数：{{dressindex}}</view>
+  <view class = "advice_detail">穿衣：{{advicedetail}}</view>
+  <view class = "uv">紫外线强度：{{uv}}</view>
+  <view class = "wash_index">洗车指数：{{washindex}}</view>
+</view>
+</scroll-view>

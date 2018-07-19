@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/discover/discover",
+    "pages/setting/setting",
+    "pages/qrcode/qrcode",
+    "pages/multi/multi",
+    "pages/multi1/multi1",
+    "pages/multi2/multi2",
+    "pages/multi3/multi3",
+    "pages/multi4/multi4",
+    "pages/multi5/multi5",
+    "pages/multi6/multi6"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "超级農農",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "white",
+    "backgroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/bar_home_black.png",
+        "selectedIconPath": "images/bar_home.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "iconPath": "images/bar_explore_black.png",
+        "selectedIconPath": "images/bar_explore.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "images/bar_mine_black.png",
+        "selectedIconPath": "images/bar_mine.png"
+      }
+    ]
+  },
+  "debug": true,
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
+}

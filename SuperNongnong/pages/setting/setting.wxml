@@ -1,0 +1,10 @@
+<view class="container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+  <image src="/images/avatar.jpg" class="avatar">
+  </image>
+  <view class="section">
+    <view class="item" data-pay="wechat" bindtap="onItemClick">
+      <image src="/images/pay_wx_order.png" class="icon"></image>
+      <text class="pay-text">简介</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="page-section">
+    <view class="text-box" scroll-y="true">      
+      <text style="max-width:200px;overflow-y:auto;height:220px;" selectable="true">{{outputTxt}}</text>
+    </view>
+  </view>
+
+  <view class="page-section page-gap page-center">
+    <text selectable="true" class="text-description little-gap-top">支持手动输入、向下拉</text>
+  </view>
+
+  <view class="page-section">
+    <view class="weui-cells weui-cells_after-title">
+        <input class="weui-input" placeholder-style="color:#000000"  maxlength="50" 
+          placeholder="今晚番茄台放什么节目" value="{{inputTxt}}" confirm-type ="send" bindconfirm="bindConfirmControl" bindfocus="bindFocusClear"/>
+    </view>
+  </view>
+
+  <view class="button-selection page-gap">
+    <view class="{{isDbg?'button-show':'common-disappear'}}">
+      <button type="default" size="mini" bindtap="bindTest">调试</button>
+    </view> 
+
+    <view class="button-selection2">
+      <button type="default" class="little-gap-left little-gap-top" size="mini" data-cp="今晚番茄台放什么节目|中央一台今晚有什么节目|中央二台今晚有什么节目|中央三台今晚有什么节目|中央四台今晚有什么节目|中央五台今晚有什么节目" bindtap="bindCorpusGenerator">随机节目预告</button>
+    </view>
+  </view>
+</view>
